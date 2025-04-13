@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Conference Registration</title>
+  <style>
+    form {
+      border: 1px solid #000;
+      padding: 20px;
+      width: 400px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 5px;
+      margin-top: 5px;
+    }
+    .radio-group, .checkbox-group {
+      margin-top: 3px;
+    }
+    .radio-group label, .checkbox-group label {
+      display: block;
+      margin-bottom: 3px;
+    }
+    .radio-group input, .checkbox-group input {
+      margin-right: 3px;
+    }
+    textarea::placeholder {
+      color: #aaa;
+    }
+    input::placeholder {
+      color: #aaa;
+    }
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+    }
+    input[type="submit"], input[type="reset"] {
+      width: 48%;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      border: 1px solid #000;
+      background-color: #f0f0f0;
+      transition: background-color 0.3s;
+    }
+    input[type="submit"]:hover, input[type="reset"]:hover {
+      background-color: #ddd;
+    }
+
+    /* Add margin for the elements you mentioned */
+    .radio-group {
+      margin-bottom: 15px; /* Between Female and Country of Residence */
+    }
+
+    select#country_residence {
+      margin-bottom: 10px; /* Reduced space between Country of Residence and Areas of Interest */
+    }
+
+    .checkbox-group {
+      margin-bottom: 10px; /* Reduced space between Areas of Interest checkboxes */
+    }
+
+    .checkbox-group label {
+      margin-bottom: 3px; /* Reduced space between checkboxes */
+    }
+
+    .checkbox-group {
+      margin-bottom: 3px; /* Space between Artificial Intelligence checkbox and Experience Level */
+    }
+
+    .radio-group {
+      margin-top: 3px; /* Reduced space between Experience Level and radio buttons */
+    }
+
+    .radio-group label {
+      margin-bottom: 5px; /* Reduced space between Experience Level radio buttons */
+    }
+
+    .button-group {
+      margin-top: 20px; /* Space between last radio button and the buttons */
+    }
+  </style>
+</head>
+<body>
+  <h1>Conference Registration Form</h1>
+  <form action="#" method="post">
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required placeholder="Enter your email address">
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="18" max="99" required placeholder="18">
+
+    <label>Gender</label>
+    <div class="radio-group">
+      <label for="male">
+        <input type="radio" id="male" name="gender" value="male" required> Male
+      </label>
+      <label for="female">
+        <input type="radio" id="female" name="gender" value="female" required> Female
+      </label>
+    </div>
+
+    <label for="country_residence">Country of Residence:</label>
+    <select id="country_residence" name="country_residence">
+      <option value="malaysia">Malaysia</option>
+      <option value="usa">United States</option>
+      <option value="uk">United Kingdom</option>
+      <option value="canada">Canada</option>
+      <option value="australia">Australia</option>
+      <option value="singapore">Singapore</option>
+      <option value="india">India</option>
+      <option value="japan">Japan</option>
+      <option value="germany">Germany</option>
+      <option value="france">France</option>
+      <option value="brazil">Brazil</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label>Areas of Interest:</label>
+    <div class="checkbox-group">
+      <label for="software_development">
+        <input type="checkbox" id="software_development" name="areas_of_interest" value="software_development"> Software Development
+      </label>
+      <label for="data_science">
+        <input type="checkbox" id="data_science" name="areas_of_interest" value="data_science"> Data Science
+      </label>
+      <label for="cybersecurity">
+        <input type="checkbox" id="cybersecurity" name="areas_of_interest" value="cybersecurity"> Cybersecurity
+      </label>
+      <label for="ai">
+        <input type="checkbox" id="ai" name="areas_of_interest" value="artificial_intelligence"> Artificial Intelligence
+      </label>
+    </div>
+
+    <label>Experience Level:</label>
+    <div class="radio-group">
+      <label for="beginner">
+        <input type="radio" id="beginner" name="experience_level" value="beginner" required> Beginner
+      </label>
+      <label for="intermediate">
+        <input type="radio" id="intermediate" name="experience_level" value="intermediate" required> Intermediate
+      </label>
+      <label for="advanced">
+        <input type="radio" id="advanced" name="experience_level" value="advanced" required> Advanced
+      </label>
+    </div>
+
+    <label for="comment">Comments or Questions:</label>
+    <textarea id="comment" name="comment" rows="4" placeholder="Any comments or questions?"></textarea>
+
+    <div class="button-group">
+      <input type="submit" value="Register">
+      <input type="reset" value="Reset">
+    </div>
+  </form>
+</body>
+</html>
